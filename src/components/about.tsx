@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Check, ArrowUpRight } from "lucide-react";
 import { principles } from "@/lib/site";
+import { projects } from "@/lib/projects";
 
 export function Differentials() {
   return <section id="diferenciais" className="section container differences" aria-labelledby="differences-title"><div><p className="eyebrow">02 / NOSSO JEITO DE CONSTRUIR</p><h2 id="differences-title">Mais intenção.<br /><span>Em cada entrega.</span></h2><p className="section-description">Um bom projeto vai além da aparência.<br /> Precisa funcionar bem, fazer sentido e estar preparado para evoluir.</p><div className="principle-note"><span className="small-orbit">↗</span><span>Do planejamento ao código,<br /><strong>o seu negócio é o ponto de partida.</strong></span></div></div>
@@ -8,8 +10,19 @@ export function Differentials() {
 }
 
 export function Portfolio() {
-  return <section id="portfolio" className="section portfolio-section" aria-labelledby="portfolio-title"><div className="container"><div className="section-heading"><div><p className="eyebrow">03 / PORTFÓLIO</p><h2 id="portfolio-title">Espaço para o que<br /><span>vamos construir.</span></h2></div><p>Cada projeto tem uma história.<br /> Este será o lugar para compartilhar as nossas.</p></div>
-    <div className="portfolio-empty"><div className="portfolio-symbol" aria-hidden="true"><span /><span /><ArrowUpRight /></div><div><span className="label">PRÓXIMAS PUBLICAÇÕES</span><h3>Novas soluções vão ganhar espaço aqui.</h3><p>Nosso portfólio está em preparação. Os projetos serão apresentados após a conclusão e a autorização de publicação.</p></div><span className="portfolio-status"><span /> Em preparação</span></div>
+  return <section id="portfolio" className="section portfolio-section" aria-labelledby="portfolio-title"><div className="container"><div className="section-heading"><div><p className="eyebrow">03 / PORTFÓLIO</p><h2 id="portfolio-title">Ideias que ganham<br /><span>forma e presença.</span></h2></div><p>Conheça os projetos que traduzem<br /> nosso olhar para design e tecnologia.</p></div>
+    <div className="portfolio-grid">{projects.map((project) => (
+      <article className="portfolio-card" key={project.slug} aria-labelledby={`project-${project.slug}`}>
+        <div className="portfolio-cover"><Image src={project.cover.src} alt={project.cover.alt} width={project.cover.width} height={project.cover.height} sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), 640px" /></div>
+        <div className="portfolio-content">
+          <p className="portfolio-category">{project.category}</p>
+          <h3 id={`project-${project.slug}`}>{project.title}</h3>
+          <p className="portfolio-description">{project.description}</p>
+          <span className="portfolio-type">{project.type}</span>
+          <a className="button button-outline" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Ver demonstração de ${project.title} (abre em nova aba)`}>Ver demonstração <ArrowUpRight size={18} aria-hidden="true" /></a>
+        </div>
+      </article>
+    ))}</div>
   </div></section>;
 }
 
