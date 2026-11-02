@@ -18,7 +18,7 @@ export const projects: readonly PortfolioProject[] = [
     description: "Landing page para academia fictícia, com identidade visual própria, modalidades, planos e galeria interativa.",
     cover: {
       src: "/images/portfolio/pulso.webp",
-      alt: "Página inicial do PULSO Training Club, com o título Supere seus limites e um atleta sobre fundo verde-lima.",
+      alt: "Página inicial do PULSO Training Club, com o título Supere seus limites e uma foto em preto e branco de um atleta levantando uma barra.",
       width: 1200,
       height: 565,
     },

@@ -88,8 +88,8 @@ h3 { font-size: 18px; letter-spacing: -.45px; font-weight: 550; }
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .portfolio-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid #304563; border-radius: 12px; background: #111e35; transition: border-color .18s ease; }
 .portfolio-card:hover { border-color: #136ef8; }
-.portfolio-cover { aspect-ratio: 16 / 9; overflow: hidden; background: #101713; }
-.portfolio-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.portfolio-cover { aspect-ratio: 16 / 9; overflow: hidden; padding-inline: 3px; background: #101713; }
+.portfolio-cover img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .portfolio-content { display: flex; flex: 1; flex-direction: column; align-items: start; padding: 24px; }
 .portfolio-category { color: #38bdf8; font-size: 11px; line-height: 1.6; }
 .portfolio-content h3 { margin-top: 10px; font-size: 22px; line-height: 1.3; }
