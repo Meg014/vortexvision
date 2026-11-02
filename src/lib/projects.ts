@@ -23,4 +23,18 @@ export const projects: readonly PortfolioProject[] = [
       height: 565,
     },
   },
+  {
+    slug: "oromake",
+    title: "OROMAKE Japanese Kitchen",
+    category: "Landing Page • Gastronomia",
+    type: "Projeto demonstrativo",
+    url: "https://oromake-demo.pages.dev/",
+    description: "Site demonstrativo de restaurante japonês, com identidade própria, cardápio interativo, fotografias gastronômicas e layout responsivo.",
+    cover: {
+      src: "/images/portfolio/oromake.webp",
+      alt: "Hero do OROMAKE Japanese Kitchen, com o título Seu próximo sabor favorito é japonês e uma fotografia de um combinado de sushi e sashimi.",
+      width: 1200,
+      height: 625,
+    },
+  },
 ];
