@@ -15,7 +15,7 @@ export const projects: readonly PortfolioProject[] = [
     category: "Landing Page • Fitness",
     type: "Projeto demonstrativo",
     url: "https://pulso-training-demo.pages.dev/",
-    description: "Landing page conceitual para academia, com identidade visual própria, apresentação de modalidades, galeria e planos demonstrativos.",
+    description: "Landing page para academia fictícia, com identidade visual própria, modalidades, planos e galeria interativa.",
     cover: {
       src: "/images/portfolio/pulso.webp",
       alt: "Página inicial do PULSO Training Club, com o título Supere seus limites e um atleta sobre fundo verde-lima.",

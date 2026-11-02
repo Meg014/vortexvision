@@ -13,7 +13,7 @@ export function Portfolio() {
   return <section id="portfolio" className="section portfolio-section" aria-labelledby="portfolio-title"><div className="container"><div className="section-heading"><div><p className="eyebrow">03 / PORTFÓLIO</p><h2 id="portfolio-title">Ideias que ganham<br /><span>forma e presença.</span></h2></div><p>Conheça os projetos que traduzem<br /> nosso olhar para design e tecnologia.</p></div>
     <div className="portfolio-grid">{projects.map((project) => (
       <article className="portfolio-card" key={project.slug} aria-labelledby={`project-${project.slug}`}>
-        <div className="portfolio-cover"><Image src={project.cover.src} alt={project.cover.alt} width={project.cover.width} height={project.cover.height} sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), 640px" /></div>
+        <div className="portfolio-cover"><Image src={project.cover.src} alt={project.cover.alt} width={project.cover.width} height={project.cover.height} sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 959px) calc((100vw - 92px) / 2), (max-width: 1100px) calc((100vw - 120px) / 3), (max-width: 1296px) calc((100vw - 152px) / 3), 382px" /></div>
         <div className="portfolio-content">
           <p className="portfolio-category">{project.category}</p>
           <h3 id={`project-${project.slug}`}>{project.title}</h3>
